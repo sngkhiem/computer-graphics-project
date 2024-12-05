@@ -78,7 +78,7 @@ float calculateAngle(Point3f O, Point3f A, Point3f B)
 	float OA = (O - A).Norm();
 	float OB = (O - B).Norm();
 
-	return acos((O - A).dot(O - B) / (OA * OB));
+	return acos((O - A).dot(O - B) / (2.0f * OA * OB));
 }
 
 std::map<std::string, QVariant> QhullPlugin::applyFilter(
