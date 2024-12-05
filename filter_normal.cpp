@@ -194,7 +194,7 @@ std::map<std::string, QVariant> QhullPlugin::applyFilter(
 
 				// (v1 - v0) x (v2 - v0)
 				
-				Point3f vertexNormal = ((vadj1 - vadj0) ^ (vadj2 - vadj0));
+				Point3f vertexNormal = (((vadj1 - vadj0) ^ (vadj2 - vadj0))).Normalize();
 
 				// calculate the normal using formula N_j = Sum(a_iN_i);
 				// where a_i is the angle of vertex j in face i
